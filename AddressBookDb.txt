@@ -48,3 +48,19 @@ mysql> describe Address_BookDB;
 | email        | varchar(255) | NO   |     | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
 8 rows in set (0.00 sec)
+
+insert into AddressBook_DB values('Dev','prasad','Vinoba Nagar','Tumsar','maharashtra',441912,'7778925464','yashgharde07@gmail.com'),('nayab', 'jahan','Shivaji Nagar','kolkata','maharashtra',441912,'7559236425','bharatpathak099@gmail.com'),('ashana', 'Azeem','Shivaji Nagar','Tumsar','maharashtra',441912,'9156845912','pathakmohit0766@gmail.com');
+ERROR 1146 (42S02): Table 'addressbookdb.addressbook_db' doesn't exist
+mysql> insert into Address_bookdB values('Dev','prasad','Vinoba Nagar','Tumsar','maharashtra',441912,'7778925464','yashgharde07@gmail.com'),('nayab', 'jahan','Shivaji Nagar','kolkata','maharashtra',441912,'7559236425','bharatpathak099@gmail.com'),('ashana', 'Azeem','Shivaji Nagar','Tumsar','maharashtra',441912,'9156845912','pathakmohit0766@gmail.com');
+Query OK, 3 rows affected (0.03 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from address_bookdb;
++------------+-----------+---------------+---------+-------------+--------+--------------+---------------------------+
+| first_name | last_name | address       | city    | state       | zip    | phone_number | email                     |
++------------+-----------+---------------+---------+-------------+--------+--------------+---------------------------+
+| Dev        | prasad    | Vinoba Nagar  | Tumsar  | maharashtra | 441912 | 7778925464   | yashgharde07@gmail.com    |
+| nayab      | jahan     | Shivaji Nagar | kolkata | maharashtra | 441912 | 7559236425   | bharatpathak099@gmail.com |
+| ashana     | Azeem     | Shivaji Nagar | Tumsar  | maharashtra | 441912 | 9156845912   | pathakmohit0766@gmail.com |
++------------+-----------+---------------+---------+-------------+--------+--------------+---------------------------+
+3 rows in set (0.00 sec)
