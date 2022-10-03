@@ -148,3 +148,11 @@ mysql> select * from Address_bookdb;
 | ashana     | Azeem     | Shivaji Nagar | Tumsar | maharashtra | 441912 | 9156845912   | pathakmohit0766@gmail.com | family address book  | Family           |
 +------------+-----------+---------------+--------+-------------+--------+--------------+---------------------------+----------------------+------------------+
 2 rows in set (0.00 sec)
+
+mysql> select count(addressBook_Type) from address_bookdb where addressBook_Type = 'Family';
++-------------------------+
+| count(addressBook_Type) |
++-------------------------+
+|                       1 |
++-------------------------+
+1 row in set (0.00 sec)
