@@ -64,3 +64,21 @@ mysql> select * from address_bookdb;
 | ashana     | Azeem     | Shivaji Nagar | Tumsar  | maharashtra | 441912 | 9156845912   | pathakmohit0766@gmail.com |
 +------------+-----------+---------------+---------+-------------+--------+--------------+---------------------------+
 3 rows in set (0.00 sec)
+
+mysql> update Address_bookdb set zip = 4412657 where first_name = 'dev';
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  update Address_bookdb set city = 'delhi' where last_name = 'jahan';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from address_bookdb;
++------------+-----------+---------------+--------+-------------+---------+--------------+---------------------------+
+| first_name | last_name | address       | city   | state       | zip     | phone_number | email                     |
++------------+-----------+---------------+--------+-------------+---------+--------------+---------------------------+
+| Dev        | prasad    | Vinoba Nagar  | Tumsar | maharashtra | 4412657 | 7778925464   | yashgharde07@gmail.com    |
+| nayab      | jahan     | Shivaji Nagar | delhi  | maharashtra |  441912 | 7559236425   | bharatpathak099@gmail.com |
+| ashana     | Azeem     | Shivaji Nagar | Tumsar | maharashtra |  441912 | 9156845912   | pathakmohit0766@gmail.com |
++------------+-----------+---------------+--------+-------------+---------+--------------+---------------------------+
+3 rows in set (0.00 sec)
