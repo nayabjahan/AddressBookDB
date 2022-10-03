@@ -96,3 +96,12 @@ mysql> select * from address_bookdb;
 | ashana     | Azeem     | Shivaji Nagar | Tumsar | maharashtra | 441912 | 9156845912   | pathakmohit0766@gmail.com |
 +------------+-----------+---------------+--------+-------------+--------+--------------+---------------------------+
 2 rows in set (0.00 sec)
+
+mysql>  select first_name, last_name from Address_bookdb where city = 'Tumsar' or state = 'Maharashtra';
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| nayab      | jahan     |
+| ashana     | Azeem     |
++------------+-----------+
+2 rows in set (0.00 sec)
