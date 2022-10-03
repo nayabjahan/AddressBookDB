@@ -122,3 +122,29 @@ mysql>  select first_name , last_name from address_bookdb where city = 'tumsar' 
 | ashana     | Azeem     |
 +------------+-----------+
 1 row in set (0.06 sec)
+
+
+mysql> alter table Address_bookdb add addressBook_Name varchar(30);
+Query OK, 0 rows affected (0.18 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table Address_bookdb add addressBook_Type varchar(30);
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> update address_bookdb set addressBook_Name = 'family address book', addressBook_Type = 'Family' where first_name='ashana';
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update address_bookdb set addressBook_Name = 'friends address book', addressBook_Type = 'Friends' where first_name='nayab';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Address_bookdb;
++------------+-----------+---------------+--------+-------------+--------+--------------+---------------------------+----------------------+------------------+
+| first_name | last_name | address       | city   | state       | zip    | phone_number | email                     | addressBook_Name     | addressBook_Type |
++------------+-----------+---------------+--------+-------------+--------+--------------+---------------------------+----------------------+------------------+
+| nayab      | jahan     | Shivaji Nagar | delhi  | maharashtra | 441912 | 7559236425   | bharatpathak099@gmail.com | friends address book | Friends          |
+| ashana     | Azeem     | Shivaji Nagar | Tumsar | maharashtra | 441912 | 9156845912   | pathakmohit0766@gmail.com | family address book  | Family           |
++------------+-----------+---------------+--------+-------------+--------+--------------+---------------------------+----------------------+------------------+
+2 rows in set (0.00 sec)
